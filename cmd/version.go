@@ -30,13 +30,8 @@ var GitCommit = ""
 // versionCmd represents the version command
 var versionCmd = &cobra.Command{
 	Use:   "version",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Outputs the version",
+	Long:  `also it outputs the git commit it was built on`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Version: ", Version)
 		fmt.Println("Git: ", GitCommit)
